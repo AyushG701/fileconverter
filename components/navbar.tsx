@@ -21,7 +21,7 @@ export default function Navbar({}): any {
         <Image
           alt="logo"
           className="w-40 cursor-pointer dark:invert"
-          src="/images/logo.svg"
+          src="/image/logo.png"
           height={100}
           width={170}
         />
@@ -32,12 +32,12 @@ export default function Navbar({}): any {
         </Button>
         <Link href="/about">
           <Button variant="ghost" className="font-semibold text-md">
-            About
+            About Us
           </Button>
         </Link>
-        <Link href="/privacy-policy">
+        <Link href="/policy">
           <Button variant="ghost" className="font-semibold text-md">
-            Privacy Policy
+            Policies
           </Button>
         </Link>
       </div>
@@ -46,10 +46,10 @@ export default function Navbar({}): any {
         <Link href="https://github.com/ayushG701/fileconverter.git">
           <Button
             variant="default"
-            className="items-center hidden gap-2 bg-orange-600 rounded-full w-fit md:flex"
+            className="items-center hidden gap-2 bg-slate-800  rounded-full w-fit md:flex"
             size="lg"
           >
-            <span>Github Repo</span>
+            <span>Github</span>
             <span className="text-xl">
               <BsGithub />
             </span>
@@ -83,17 +83,17 @@ export default function Navbar({}): any {
                       variant="link"
                       className="w-full font-semibold text-md"
                     >
-                      About
+                      About Us
                     </Button>
                   </Link>
                 </SheetTrigger>
                 <SheetTrigger asChild>
-                  <Link href="/privacy-policy">
+                  <Link href="/policy">
                     <Button
                       variant="link"
                       className="w-full font-semibold text-md"
                     >
-                      Privacy Policy
+                      Policy
                     </Button>
                   </Link>
                 </SheetTrigger>

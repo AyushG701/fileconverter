@@ -3,17 +3,18 @@ import DropzoneUploader from "./DropzoneUploader";
 import FileActions from "./FileActions";
 import { useToast } from "@/components/ui/use-toast";
 import { useDropzone } from "react-dropzone";
-interface Action {
-  file_name: string;
-  file_size: number;
-  from: string;
-  to: string | null;
-  file_type: string;
-  file: File;
-  is_converted: boolean;
-  is_converting: boolean;
-  is_error: boolean;
-}
+import { Action } from "@/types";
+// interface Action {
+//   file_name: string;
+//   file_size: number;
+//   from: string;
+//   to: string | null;
+//   file_type: string;
+//   file: File;
+//   is_converted: boolean;
+//   is_converting: boolean;
+//   is_error: boolean;
+// }
 
 const Dropzone: React.FC = () => {
   // State management
@@ -109,7 +110,7 @@ const Dropzone: React.FC = () => {
       {actions.length ? (
         <FileActions
           actions={actions}
-          setActions={(actions: Action[]) => setActions(actions)}
+          setActions={setActions}
           is_loaded={is_loaded}
           setIsLoaded={setIsLoaded}
           ffmpegRef={ffmpegRef}
